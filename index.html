@@ -1,507 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Arrow ECS</title>
+    <meta content="" name="description" />
 
-  <title>Arrow ECS</title>
-  <meta content="" name="description">
+    <meta content="" name="keywords" />
 
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/arrow.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/arrow.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: FlexStart - v1.4.0
   * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="
+          container-fluid container-xl
+          d-flex
+          align-items-center
+          justify-content-between
+        "
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="" />
+          <span>ARROW ECS</span>
+        </a>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span>ARROW ECS</span>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="solutions.html">Solutions</a></li>
-          <li><a class="nav-link scrollto" href="services.html">Services</a></li>
-          <li><a class="nav-link scrollto" href="fournisseurs.html">Fournisseurs</a></li>
-          <li><a class="nav-link scrollto" href="plus.html">Plus</a></li>
-          <li><a href="equipe.php">Nous contacter</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Choisissez la valeur. </h1>
-          <h1 data-aos="fade-up">Choisissez Arrow. </h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">Il est important que votre partenaire s’engage à vous apporter la valeur et l’innovation dont vous avez besoin pour faire progresser votre entreprise aujourd’hui.</h2>
-      
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-        </div>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto active" href="index.html">Accueil</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="solutions.html">Solutions</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="services.html">Services</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="fournisseurs.html"
+                >Fournisseurs</a
+              >
+            </li>
+            <li><a class="nav-link scrollto" href="plus.html">Plus</a></li>
+            <li><a href="equipe.php">Nous contacter</a></li>
+            <li>
+              <a href="../ARROW-Client/login.php" target="_black"
+                ><button type="button" class="btn btn-dark">
+                  Arrow Clients
+                </button></a
+              >
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
       </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-    <!-- ======= solutions Section ======= -->
-    <section id="about" class="about">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h3>Solutions</h3>
-        </header>
-        <div class="row gx-0">
-          
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3></h3>
-              <h2>Cloud</h2>
-              <p>
-                Doter les sociétés de pointe de demain de solutions cloud novatrices.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="solutions.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Lire la suite</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/cloudc.jpg" class="img-fluid" alt="">
-          </div>
-
-        </div>
-      </div>
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/data.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3></h3>
-              <h2>Data Intelligence</h2>
-              <p>
-                Le monde d'aujourd'hui est de plus en plus guidé par les données. Transformez ces données en connaissances métier exploitables.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="solutions.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Lire la suite</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          
-
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-          
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3></h3>
-              <h2>Edge et IdO</h2>
-              <p>
-                Nous sommes uniques dans notre capacité à soutenir nos partenaires avec un portefeuille de solutions Edge et IdO de bout en bout.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="solutions.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Lire la suite</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/iot.jpg" class="img-fluid" alt="">
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/DataCentre.png" class="img-fluid" alt="">
-          </div>
-          
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3></h3>
-              <h2>NextGen Data Centre</h2>
-              <p>
-                Réduire les coûts et la complexité, améliorer les performances et la disponibilité des applications tout en intégrant les ressources.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="solutions.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Lire la suite</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          
-          
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3></h3>
-              <h2>Solutions de sécurité</h2>
-              <p>
-                Protégez le business de vos clients grâce au cadre de sécurité complet et de bout en bout que fournit Arrow.
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="solutions.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Lire la suite</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/secur.jpg" class="img-fluid" alt="">
-          </div>
-          
-        </div>
-      </div>
-
-    </section><!-- End solutuions Section -->
-
-    <!-- ======= services Section ======= -->
-    <section id="values" class="values">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Services</h2>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/livraison.jpg" class="img-fluid" alt="">
-              <h3>Services de livraison mondiale</h3>
-              <p>Simplifier les défis complexes des livraisons mondiales.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/img/edu.jpg" class="img-fluid" alt="">
-              <h3>Arrow Education</h3>
-              <p>Optimisez votre investissement techonologique grâce à une formation certifiante.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="600">
-              <img src="assets/img/saas.png" class="img-fluid" alt="">
-              <h3>Hébergement & SaaS</h3>
-              <p>Arrow ECS, propose un catalogue de services managés aux partenaires informatiques.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/mark.jpg" class="img-fluid" alt="">
-              <h3>Service Marketing</h3>
-              <p>Une suite complète de marketing des services pour vous aider à tourner opportunité à la réalit.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/img/tec.jpg" class="img-fluid" alt="">
-              <h3>Services Techniques</h3>
-              <p>Arrow ECS Networks and Security répondra à vos besoins en terme d’avant-ventes, de support, de prestations et de formations.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End services Section -->
-
-    
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Nos fournisseurs</h2>
-          
-        </header>
-
-        <div class="clients-slider swiper-container">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/four/dell.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/force.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/ibm.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/intel.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/lenovo.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/nutanix.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/red.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/rsa.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/four/trend.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-    </section><!-- End Clients Section -->
-
-     <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Plus</h2>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/respo.png" class="img-fluid" alt=""></div>
-              <h3 class="post-title">Responsabilité sociale d'entreprise (RSE)</h3>
-              <p>Aider à transformer notre regard sur la technologie, sur nous-mêmes et sur le monde.</p>
-              <a href="plus.html" class="readmore stretched-link mt-auto"><span>Lire la suite</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/a.PNG" class="img-fluid" alt=""></div>
-              <h3 class="post-title">À propos d'Arrow</h3>
-              <p>Les solutions d'aujourd'hui pour les défis de demain.</p>
-              <a href="plus.html" class="readmore stretched-link mt-auto"><span>Lire la suite</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/point.jpg" class="img-fluid" alt=""></div>
-              <h3 class="post-title">Pourquoi choisir Arrow?</h3>
-              <p>Demeurer à l'avant-garde.</p>
-              <a href="plus.html" class="readmore stretched-link mt-auto"><span>Lire la suite</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Recent Blog Posts Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Contact</h2>
-          <h6>Pour toute demande, complétez le formulaire ci-dessus ou contactez-nous par téléphone au +212 (0)5 22 52 92 60 ou par mail: contact@arrowecs.ma</h6>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Casablanca</h3>
-                  <p>Technopark Bureau 502,<br>Casablanca - Maroc</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Appelez-nous</h3>
-                  <p>Tel: +212 (0) 5 22 52 92 60<br>Fax: +212 (0)5 22 21 14 45</p>
-                </div>
-              </div>
-              <center><div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Envoyez-nous un email</h3>
-                  <p>contact@arrowecs.ma</p>
-                </div>
-              </div></center>
-              
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Vontre Nom" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Votre EMail" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Sujet" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Envoyer le message</button>
-                </div>
-
-              </div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
-
-
-   
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    
-
-    <div class="footer-top">
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
       <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/arrowecs.png" alt="">
-            </a>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13301.64820224308!2d-7.640212999999999!3d33.542669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d3c77d56d57%3A0x39c864bef89a71f5!2sTechnopark%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2suk!4v1620593572670!5m2!1sen!2suk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">Choisissez la valeur.</h1>
+            <h1 data-aos="fade-up">Choisissez Arrow.</h1>
+            <h2 data-aos="fade-up" data-aos-delay="400">
+              Il est important que votre partenaire s’engage à vous apporter la
+              valeur et l’innovation dont vous avez besoin pour faire progresser
+              votre entreprise aujourd’hui.
+            </h2>
           </div>
-
-         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              Technopark Bureau 502,<br>
-              Casablanca - Maroc<br><br>
-              <strong>Téléphone:</strong> +212 (0) 5 22 52 92 60<br>
-              <strong>Email:</strong> contact@arrowecs.ma<br>
-            </p>
-
+          <div
+            class="col-lg-6 hero-img"
+            data-aos="zoom-out"
+            data-aos-delay="200"
+          >
+            <img src="assets/img/hero-img.png" class="img-fluid" alt="" />
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>nous suivre</h4>
-            <div class="social-links mt-3">
-              <a href="https://twitter.com/arrowglobal" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/arrowfiveyearsout" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/arrowelectronics/" class="instagram" target="_blank"><i class="bi bi-instagram bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/arrow-electronics" class="linkedin" target="_blank"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCtJWSJHzxflA84MTawxZ1hA" class="youtube" target="_blank"><i class="bi bi-youtube bx bxl-youtube"></i></a>
-            </div>
-          </div>
-          
-
         </div>
       </div>
-    </div>
+    </section>
+    <!-- End Hero -->
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>2021</span></strong>Arrow Electronics, Inc. Tous droits réservés.
+    <main id="main">
+      <!-- ======= solutions Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h3>Solutions</h3>
+          </header>
+          <div class="row gx-0">
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="content">
+                <h3></h3>
+                <h2>Cloud</h2>
+                <p>
+                  Doter les sociétés de pointe de demain de solutions cloud
+                  novatrices.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a
+                    href="solutions.html"
+                    class="
+                      btn-read-more
+                      d-inline-flex
+                      align-items-center
+                      justify-content-center
+                      align-self-center
+                    "
+                  >
+                    <span>Lire la suite</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 d-flex align-items-center"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/cloudc.jpg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+          <div class="row gx-0">
+            <div
+              class="col-lg-6 d-flex align-items-center"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/data.png" class="img-fluid" alt="" />
+            </div>
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="content">
+                <h3></h3>
+                <h2>Data Intelligence</h2>
+                <p>
+                  Le monde d'aujourd'hui est de plus en plus guidé par les
+                  données. Transformez ces données en connaissances métier
+                  exploitables.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a
+                    href="solutions.html"
+                    class="
+                      btn-read-more
+                      d-inline-flex
+                      align-items-center
+                      justify-content-center
+                      align-self-center
+                    "
+                  >
+                    <span>Lire la suite</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+          <div class="row gx-0">
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="content">
+                <h3></h3>
+                <h2>Edge et IdO</h2>
+                <p>
+                  Nous sommes uniques dans notre capacité à soutenir nos
+                  partenaires avec un portefeuille de solutions Edge et IdO de
+                  bout en bout.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a
+                    href="solutions.html"
+                    class="
+                      btn-read-more
+                      d-inline-flex
+                      align-items-center
+                      justify-content-center
+                      align-self-center
+                    "
+                  >
+                    <span>Lire la suite</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 d-flex align-items-center"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/iot.jpg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+          <div class="row gx-0">
+            <div
+              class="col-lg-6 d-flex align-items-center"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/DataCentre.png" class="img-fluid" alt="" />
+            </div>
+
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="content">
+                <h3></h3>
+                <h2>NextGen Data Centre</h2>
+                <p>
+                  Réduire les coûts et la complexité, améliorer les performances
+                  et la disponibilité des applications tout en intégrant les
+                  ressources.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a
+                    href="solutions.html"
+                    class="
+                      btn-read-more
+                      d-inline-flex
+                      align-items-center
+                      justify-content-center
+                      align-self-center
+                    "
+                  >
+                    <span>Lire la suite</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+          <div class="row gx-0">
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="content">
+                <h3></h3>
+                <h2>Solutions de sécurité</h2>
+                <p>
+                  Protégez le business de vos clients grâce au cadre de sécurité
+                  complet et de bout en bout que fournit Arrow.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a
+                    href="solutions.html"
+                    class="
+                      btn-read-more
+                      d-inline-flex
+                      align-items-center
+                      justify-content-center
+                      align-self-center
+                    "
+                  >
+                    <span>Lire la suite</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 d-flex align-items-center"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img src="assets/img/secur.jpg" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End solutuions Section -->
+
+      <!-- ======= services Section ======= -->
+      <section id="values" class="values">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Services</h2>
+          </header>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/livraison.jpg" class="img-fluid" alt="" />
+                <h3>Services de livraison mondiale</h3>
+                <p>Simplifier les défis complexes des livraisons mondiales.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/img/edu.jpg" class="img-fluid" alt="" />
+                <h3>Arrow Education</h3>
+                <p>
+                  Optimisez votre investissement techonologique grâce à une
+                  formation certifiante.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <img src="assets/img/saas.png" class="img-fluid" alt="" />
+                <h3>Hébergement & SaaS</h3>
+                <p>
+                  Arrow ECS, propose un catalogue de services managés aux
+                  partenaires informatiques.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/mark.jpg" class="img-fluid" alt="" />
+                <h3>Service Marketing</h3>
+                <p>
+                  Une suite complète de marketing des services pour vous aider à
+                  tourner opportunité à la réalit.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/img/tec.jpg" class="img-fluid" alt="" />
+                <h3>Services Techniques</h3>
+                <p>
+                  Arrow ECS Networks and Security répondra à vos besoins en
+                  terme d’avant-ventes, de support, de prestations et de
+                  formations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End services Section -->
+
+      <!-- ======= Clients Section ======= -->
+      <section id="clients" class="clients">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Nos fournisseurs</h2>
+          </header>
+
+          <div class="clients-slider swiper-container">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/four/dell.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/force.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/ibm.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/intel.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/four/lenovo.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/four/nutanix.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/red.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/rsa.png" class="img-fluid" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/four/trend.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Clients Section -->
+
+      <!-- ======= Recent Blog Posts Section ======= -->
+      <section id="recent-blog-posts" class="recent-blog-posts">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Plus</h2>
+          </header>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="assets/img/respo.png" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">
+                  Responsabilité sociale d'entreprise (RSE)
+                </h3>
+                <p>
+                  Aider à transformer notre regard sur la technologie, sur
+                  nous-mêmes et sur le monde.
+                </p>
+                <a href="plus.html" class="readmore stretched-link mt-auto"
+                  ><span>Lire la suite</span><i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="assets/img/a.PNG" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">À propos d'Arrow</h3>
+                <p>Les solutions d'aujourd'hui pour les défis de demain.</p>
+                <a href="plus.html" class="readmore stretched-link mt-auto"
+                  ><span>Lire la suite</span><i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="assets/img/point.jpg" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">Pourquoi choisir Arrow?</h3>
+                <p>Demeurer à l'avant-garde.</p>
+                <a href="plus.html" class="readmore stretched-link mt-auto"
+                  ><span>Lire la suite</span><i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Recent Blog Posts Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Contact</h2>
+            <h6>
+              Pour toute demande, complétez le formulaire ci-dessus ou
+              contactez-nous par téléphone au +212 (0)5 22 52 92 60 ou par mail:
+              contact@arrowecs.ma
+            </h6>
+          </header>
+
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Casablanca</h3>
+                    <p>Technopark Bureau 502,<br />Casablanca - Maroc</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-telephone"></i>
+                    <h3>Appelez-nous</h3>
+                    <p>
+                      Tel: +212 (0) 5 22 52 92 60<br />Fax: +212 (0)5 22 21 14
+                      45
+                    </p>
+                  </div>
+                </div>
+                <center>
+                  <div class="col-md-6">
+                    <div class="info-box">
+                      <i class="bi bi-envelope"></i>
+                      <h3>Envoyez-nous un email</h3>
+                      <p>contact@arrowecs.ma</p>
+                    </div>
+                  </div>
+                </center>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Vontre Nom"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Votre EMail"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Sujet"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="6"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Envoyer le message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/arrowecs.png" alt="" />
+              </a>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13301.64820224308!2d-7.640212999999999!3d33.542669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d3c77d56d57%3A0x39c864bef89a71f5!2sTechnopark%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2suk!4v1620593572670!5m2!1sen!2suk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div
+              class="
+                col-lg-3 col-md-12
+                footer-contact
+                text-center text-md-start
+              "
+            >
+              <h4>Contact Us</h4>
+              <p>
+                Technopark Bureau 502,<br />
+                Casablanca - Maroc<br /><br />
+                <strong>Téléphone:</strong> +212 (0) 5 22 52 92 60<br />
+                <strong>Email:</strong> contact@arrowecs.ma<br />
+              </p>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>nous suivre</h4>
+              <div class="social-links mt-3">
+                <a
+                  href="https://twitter.com/arrowglobal"
+                  class="twitter"
+                  target="_blank"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/arrowfiveyearsout"
+                  class="facebook"
+                  target="_blank"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/arrowelectronics/"
+                  class="instagram"
+                  target="_blank"
+                  ><i class="bi bi-instagram bx bxl-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/arrow-electronics"
+                  class="linkedin"
+                  target="_blank"
+                  ><i class="bi bi-linkedin bx bxl-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCtJWSJHzxflA84MTawxZ1hA"
+                  class="youtube"
+                  target="_blank"
+                  ><i class="bi bi-youtube bx bxl-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-    </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>2021</span></strong
+          >Arrow Electronics, Inc. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

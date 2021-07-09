@@ -61,6 +61,13 @@
               <li><a href="partenaire.php">Devenir partenaire</a></li>
             </ul>
           </li>
+          <li>
+              <a href="../ARROW-Client/login.php" target="_black"
+                ><button type="button" class="btn btn-dark">
+                  Arrow Clients
+                </button></a
+              >
+            </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
