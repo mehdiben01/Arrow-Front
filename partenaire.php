@@ -97,7 +97,70 @@
       <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       
+   <?php
 
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "arrow_client";
+
+
+        //connexion au serveur
+        $con = mysqli_connect($servername, $username, $password, $dbname);
+
+
+        if (isset($_POST['Ajouter'])) {
+
+
+
+            $prenom = $_POST['prenom'];
+            @$prenom = str_replace("'", "\'", $prenom);
+            @$nom = $_POST['nom'];
+            @$nom = str_replace("'", "\'", $nom);
+            @$profession = $_POST['profession'];
+            @$profession = str_replace("'", "\'", $profession);
+            @$entreprise = $_POST['entreprise'];
+            @$entreprise = str_replace("'", "\'", $entreprise);
+            @$email = $_POST['email'];
+            @$email = str_replace("'", "\'", $email);
+            @$tel = $_POST['tel'];
+            @$tel = str_replace("'", "\'", $tel);
+             @$produit = $_POST['produit'];
+            @$produit = str_replace("'", "\'", $produit);
+            @$plus = $_POST['plus'];
+            @$plus = str_replace("'", "\'", $plus);
+
+
+
+
+            $sql = "INSERT INTO contacts (prenom,nom,profession,entreprise,email,tel,produit,description,type) VALUES  ('$prenom' , '$nom','$profession' , '$entreprise', '$email','$tel','$produit', '$plus','Partenaire')    ";
+            $result = $con->query($sql);
+
+            echo  '
+
+
+              <script src="plugins/jquery/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+                     <script type="text/javascript">   
+              
+                              $(document).ready(function(){
+              
+                               
+                                
+                                swal({
+                                    icon: "success",
+                                    title: "Bien .",
+                                    text: "Envoyé ",
+                                })
+                              });
+                            </script>
+              ';
+            echo ("<meta http-equiv='refresh' content='2'>");
+        }
+
+
+        ?>
         
 
     <main class="login-form">
@@ -107,46 +170,46 @@
                 <div class="card">
                     <div class="card-header">Devenir partenaire</div>
                     <div class="card-body">
-                        <form action="" method="">
+                        <form action="" method="POST">
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Prenom</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="prenom" class="form-control" name="prenom" required >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Nom</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="nom" class="form-control" name="nom" required >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Profession</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="profession" class="form-control" name="profession" required >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Entreprise</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="entreprise" class="form-control" name="entreprise" required >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Adresse mail</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="email" class="form-control" name="email" required >
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Telephone</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="tel" class="form-control" name="tel" required >
                                 </div>
                             </div>
 
@@ -154,21 +217,21 @@
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Quels produits et/ ou services offrez-vous ? </label>
                                 <div class="col-md-6">
-                                    <textarea type="text" id="email_address" class="form-control" name="email-address" required autofocus></textarea>
+                                    <textarea type="text" id="produit" class="form-control" name="produit" required ></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Comment pouvons-nous vous aider ?  </label>
                                 <div class="col-md-6">
-                                    <textarea type="text" id="email_address" class="form-control" name="email-address" required autofocus></textarea>
+                                    <textarea type="text" id="plus" class="form-control" name="plus" required ></textarea>
                                 </div>
                             </div>
 
                             
 
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary" style="float: right;">
+                                <button type="submit" class="btn btn-primary" style="float: right;" id="Ajouter" name="Ajouter">
                                     Envoyer
                                 </button>
                                 
@@ -216,7 +279,7 @@
 
           </div>
 
-          <div class="col-lg-2 col-6 footer-links">
+          <div class="col-lg-3 col-6 footer-links">
             <h4>nous suivre</h4>
             <div class="social-links mt-3">
               <a href="https://twitter.com/arrowglobal" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>

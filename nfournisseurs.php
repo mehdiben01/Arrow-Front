@@ -97,7 +97,72 @@
      <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       
+   <?php
 
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "arrow_client";
+
+
+        //connexion au serveur
+        $con = mysqli_connect($servername, $username, $password, $dbname);
+
+
+        if (isset($_POST['Ajouter'])) {
+
+
+
+            $prenom = $_POST['prenom'];
+            @$prenom = str_replace("'", "\'", $prenom);
+            @$nom = $_POST['nom'];
+            @$nom = str_replace("'", "\'", $nom);
+            @$profession = $_POST['profession'];
+            @$profession = str_replace("'", "\'", $profession);
+            @$entreprise = $_POST['entreprise'];
+            @$entreprise = str_replace("'", "\'", $entreprise);
+            @$email = $_POST['email'];
+            @$email = str_replace("'", "\'", $email);
+            @$tel = $_POST['tel'];
+            @$tel = str_replace("'", "\'", $tel);
+            @$domaine = $_POST['domaine'];
+            @$domaine = str_replace("'", "\'", $domaine);
+             @$produit = $_POST['produit'];
+            @$produit = str_replace("'", "\'", $produit);
+            @$description = $_POST['description'];
+            @$description = str_replace("'", "\'", $description);
+
+
+
+
+            $sql = "INSERT INTO contacts (prenom,nom,profession,entreprise,email,tel,domaine,produit,description,type) VALUES  ('$prenom' , '$nom','$profession' , '$entreprise', '$email','$tel', '$domaine','$produit','$description','Fournisseur')    ";
+            $result = $con->query($sql);
+
+            echo  '
+
+
+              <script src="plugins/jquery/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+                     <script type="text/javascript">   
+              
+                              $(document).ready(function(){
+              
+                               
+                                
+                                swal({
+                                    icon: "success",
+                                    title: "Bien .",
+                                    text: "Envoyé ",
+                                })
+                              });
+                            </script>
+              ';
+            echo ("<meta http-equiv='refresh' content='2'>");
+        }
+
+
+        ?>
         
 
     <main class="login-form">
@@ -107,60 +172,60 @@
                 <div class="card">
                     <div class="card-header">Nouveau fournisseur</div>
                     <div class="card-body">
-                        <form action="" method="">
+                        <form action="" method="POST">
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Prenom</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="prenom" class="form-control" name="prenom" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Nom</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="nom" class="form-control" name="nom" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Profession</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="profession" class="form-control" name="profession" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Entreprise</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="text" id="entreprise" class="form-control" name="entreprise" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Adresse mail</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="email" id="email" class="form-control" name="email" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Telephone</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
+                                    <input type="tel" id="tel" class="form-control" name="tel" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Merci de nous indiquer votre domaine d’expertise : </label>
                                 <div class="col-md-6">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="domaine" type="domaine">
                                     <option selected>Veuillez sélectionner</option>
-                                    <option value="1">Cloud</option>
-                                    <option value="2">Data Center</option>
-                                    <option value="3">Security & Networking</option>
-                                    <option value="4">Big Data & Analytics</option>
-                                    <option value="5">IOT</option>
-                                    <option value="6">GDPR</option>
+                                    <option value="Cloud">Cloud</option>
+                                    <option value="Data Center">Data Center</option>
+                                    <option value="Security & Networking">Security & Networking</option>
+                                    <option value="Big Data & Analytics">Big Data & Analytics</option>
+                                    <option value="IOT">IOT</option>
+                                    <option value="GDPR">GDPR</option>
                                 </select>
                                 </div>
                             </div>
@@ -168,21 +233,21 @@
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Quels produits et/ou services fournissez-vous ? </label>
                                 <div class="col-md-6">
-                                    <textarea type="text" id="email_address" class="form-control" name="email-address" required autofocus></textarea>
+                                    <textarea type="text" id="produit" class="form-control" name="produit" required autofocus></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">Merci de nous fournir une description de vos produits et/ou services : </label>
                                 <div class="col-md-6">
-                                    <textarea type="text" id="email_address" class="form-control" name="email-address" required autofocus></textarea>
+                                    <textarea type="text" id="description" class="form-control" name="description" required autofocus></textarea>
                                 </div>
                             </div>
 
                             
 
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary" style="float: right;">
+                                <button type="submit" class="btn btn-primary" style="float: right;" name="Ajouter" id="Ajouter">
                                     Envoyer
                                 </button>
                                 
@@ -230,7 +295,7 @@
 
           </div>
 
-          <div class="col-lg-2 col-6 footer-links">
+          <div class="col-lg-3 col-6 footer-links">
             <h4>nous suivre</h4>
             <div class="social-links mt-3">
               <a href="https://twitter.com/arrowglobal" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
